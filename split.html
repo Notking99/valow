@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <meta charset="utf-8">
+  <title>split</title>
+
+  <style>
+
+    body{
+      width: 1080px;
+      /*위젯을 중앙 정렬하기 위한 코드*/
+      display: block;
+      margin: auto;
+    }
+   
+    /*중앙 정렬*/
+    .center {
+      display: block;
+      margin: auto;
+    }
+
+    /*맵과 캐릭터 버튼이 있는 왼쪽 div*/
+    .part1 {
+      width: 610px;
+      margin: 0 auto;
+      background-color: brown;
+      /*수평정렬을 위한 코드*/
+      float:left;
+    }
+
+    /*
+    수평으로 이쁘게 나열하기 위해 Flex레이아웃 사용
+       justify-content : space-evenly  위젯간 동일한 간격으로 배치 (엣지브라우저에서 적용 X)
+      */
+    .part1 > .container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      margin-bottom: 10px;
+    }
+
+    /*container안 img태그 크기 조절*/
+    .part1 > .container img {
+      width: 100px;
+      height: 100px;
+    }
+
+    /*유튜브 영상을 보여주는 오른쪽 div*/
+    .part2 {
+      float: left;
+      
+    }
+    /*인라인 형식인 iframe을 block형식(한줄 다 차지)으로 바꿈*/
+    .part2 iframe{
+      display: block;
+      margin: 5px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="center part1">
+    <img src="img/split_map.png" class="center" width="600px" height="600px">
+    <!--캐릭터 아이콘 및 라디오버튼 1번쨰줄-->
+    <div class="container">
+
+      <div class="item">
+        <label>
+          <div><img src="img/astra.png"></div>
+          <input type="radio" class="center" name="cha" id="r1">
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <div><img src="img/breach.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <div><img src="img/brimstone.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <div><img src="img/chamber.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <div><img src="img/cypher.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+    </div>
+    <!--캐릭터 아이콘 및 라디오버튼 2번쨰줄-->
+    <div class="container">
+
+      <div class="item">
+        <label>
+          <div><img src="img/fade.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <div><img src="img/jett.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <div><img src="img/killjoy.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <div><img src="img/ko.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+      <div class="item">
+        <label>
+          <div><img src="img/neon.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+    </div>
+    <!--캐릭터 아이콘 및 라디오버튼 3번쨰줄-->
+    <div class="container">
+
+      <div class="item">
+        <label>
+          <div><img src="img/omen.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <div><img src="img/pheonix.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <div><img src="img/raze.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <div><img src="img/reyna.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <div><img src="img/sage.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+
+    </div>
+    <!--캐릭터 아이콘 및 라디오버튼 4번쨰줄-->
+    <div class="container">
+
+      <div class="item">
+        <label>
+          <div><img src="img/skye.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <div><img src="img/sova.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <div><img src="img/viper.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+
+      <div class="item">
+        <label>
+          <div><img src="img/yoru.png"></div>
+          <input type="radio" class="center" name="cha">
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!--유튜브 영상 
+    블로그에 설명 있음 https://blog.naver.com/PostView.naver?blogId=jang0_0yw&logNo=222358947569&parentCategoryNo=&categoryNo=25&viewDate=&isShowPopularPosts=true&from=search-->
+  <div class="part2">
+    <iframe width="448" height="252" src="https://www.youtube.com/embed/lTyMxn45CSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="448" height="252" src="https://www.youtube.com/embed/lTyMxn45CSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="448" height="252" src="https://www.youtube.com/embed/lTyMxn45CSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="448" height="252" src="https://www.youtube.com/embed/lTyMxn45CSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="448" height="252" src="https://www.youtube.com/embed/lTyMxn45CSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ 
+  </div>
+
+</body>
+
+</html>
