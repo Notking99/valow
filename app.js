@@ -4,6 +4,7 @@ const path = require('path');
 const nunjucks = require('nunjucks');
 
 
+
 //서버에 포트 설정
 const app = express();
 app.set('port', process.env.PORT || 3000);
@@ -42,8 +43,7 @@ app.use((req, res, next) => {
     res.status(err.status || 500);
     res.send('Error');
   });
-  
+
   app.listen(app.get('port'), () => {
     console.log(app.get('port'), '번 포트에서 대기 중');
   });
-  
