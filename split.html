@@ -67,19 +67,30 @@
       display: block;
       margin: 5px;
     }
+    #mapdiv {
+      position:relative;
+      width: 600px;
+      height: 600px;
+    }
+
+    .absol{
+      position: absolute;
+      left: 15px;
+      top: 50px;
+    }
   </style>
 
 </head>
 
 <body>
-  <div class="center part1">
-    <img src="img/split_map.png" class="center" width="600px" height="600px">
+  <div class="center part1" id="part1">
+    <div id="mapdiv"><img src="img/split_map.png" class="center" width="600px" height="600px"></div>
     <!--캐릭터 아이콘 및 라디오버튼 1번쨰줄-->
     <div class="container">
 
       <div class="item">
         <label>
-          <input type="radio" class="center" name="cha" id="r1">
+          <input type="radio" class="center" name="cha" id="r1" onclick="show()">
           <img src="img/astra.png">
         </label>
       </div>
@@ -249,9 +260,10 @@
     <iframe width="448" height="252" src="https://www.youtube.com/embed/lTyMxn45CSM" title="YouTube video player"
       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen></iframe>
-
   </div>
 
 </body>
 
+
 </html>
+<script src = "js/split.js"></script>
