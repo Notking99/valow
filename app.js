@@ -16,6 +16,7 @@ nunjucks.configure('views', {
 app.use(morgan('dev'));
 //정적 파일 제공을 위한 코드
 app.use('/img', express.static(path.join(__dirname, 'img')));
+app.use('/js', express.static(path.join(__dirname, 'js')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -26,7 +27,6 @@ app.get('/', (req, res) => {// /를 주소 GET 요청으로 받으면 업로드(
 app.get('/split', (req, res) => {// /를 주소 GET 요청으로 받으면 업로드(메인화면) 파일을 보낸다
     res.sendFile(path.join(__dirname, 'split.html'));
   });
-
 
 app.use((req, res, next) => {
     const error =  new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
