@@ -7,18 +7,154 @@ for (i = 0; i < cha.length; i++) {
         switch (this.id) {
             case "astra":
                 initicon();
-                makeicon(10, 10);
-                makeicon(100, 10);
-                makeicon(200, 10);
-                makeicon(300, 10);
+                makeicon(1, 1);
+                makeicon(10, 1);
+                makeicon(20, 1);
+                makeicon(30, 1);
                 break;
 
             case "breach":
                 initicon();
-                makeicon(10, 100);
-                makeicon(100, 100);
-                makeicon(200, 100);
-                makeicon(300, 100);
+                makeicon(1, 10);
+                makeicon(10, 10);
+                makeicon(20, 10);
+                makeicon(30, 10);
+                break;
+
+            case "brimstone":
+                initicon();
+                makeicon(1, 20);
+                makeicon(10, 20);
+                makeicon(20, 20);
+                makeicon(30, 20);
+                break;
+
+            case "chamber":
+                initicon();
+                makeicon(1, 30);
+                makeicon(10, 30);
+                makeicon(20, 30);
+                makeicon(30, 30);
+                break;
+
+            case "cypher":
+                initicon();
+                makeicon(1, 40);
+                makeicon(10, 40);
+                makeicon(20, 40);
+                makeicon(30, 40);
+                break;
+
+            case "fade":
+                initicon();
+                makeicon(1, 50);
+                makeicon(10, 50);
+                makeicon(20, 50);
+                makeicon(30, 50);
+                break;
+
+                case "jett":
+                initicon();
+                makeicon(1, 60);
+                makeicon(10, 60);
+                makeicon(20, 60);
+                makeicon(30, 60);
+                break;
+
+                case "killjoy":
+                initicon();
+                makeicon(1, 70);
+                makeicon(10, 70);
+                makeicon(20, 70);
+                makeicon(30, 70);
+                break;
+
+                case "ko":
+                initicon();
+                makeicon(1, 80);
+                makeicon(10, 80);
+                makeicon(20, 80);
+                makeicon(30, 80);
+                break;
+
+                case "neon":
+                initicon();
+                makeicon(1, 90);
+                makeicon(10, 90);
+                makeicon(20, 90);
+                makeicon(30, 90);
+                break;
+
+                case "omen":
+                initicon();
+                makeicon(50, 1);
+                makeicon(60, 1);
+                makeicon(70, 1);
+                makeicon(80, 1);
+                break;
+
+                case "pheonix":
+                initicon();
+                makeicon(50, 10);
+                makeicon(60, 10);
+                makeicon(70, 10);
+                makeicon(80, 10);
+                break;
+
+                case "raze":
+                initicon();
+                makeicon(50, 20);
+                makeicon(60, 20);
+                makeicon(70, 20);
+                makeicon(80, 20);
+                break;
+
+                case "reyna":
+                initicon();
+                makeicon(50, 30);
+                makeicon(60, 30);
+                makeicon(70, 30);
+                makeicon(80, 30);
+                break;
+
+                case "sage":
+                initicon();
+                makeicon(50, 40);
+                makeicon(60, 40);
+                makeicon(70, 40);
+                makeicon(80, 40);
+                break;
+
+                case "skye":
+                initicon();
+                makeicon(50, 50);
+                makeicon(60, 50);
+                makeicon(70, 50);
+                makeicon(80, 50);
+                break;
+
+                case "sova":
+                initicon();
+                makeicon(50, 60);
+                makeicon(60, 60);
+                makeicon(70, 60);
+                makeicon(80, 60);
+                break;
+
+                case "viper":
+                initicon();
+                makeicon(50, 70);
+                makeicon(60, 70);
+                makeicon(70, 70);
+                makeicon(80, 70);
+                break;
+
+                case "yoru":
+                initicon();
+                makeicon(50, 80);
+                makeicon(60, 80);
+                makeicon(70, 80);
+                makeicon(80, 80);
                 break;
 
             default:
@@ -30,9 +166,9 @@ for (i = 0; i < cha.length; i++) {
 
 function initicon() {
     var dellist = document.getElementsByClassName('mapicon');
-    
+
     const listlength = dellist.length;
-    
+
     for (z = 0; z < listlength; z++) {
         console.log(dellist[z]);
         dellist[0].remove();
@@ -48,7 +184,7 @@ function makeicon(x, y) {
     icon.setAttribute('width', '30px');
     icon.setAttribute('height', '30px');
     icon.setAttribute('class', 'mapicon');
-    icon.setAttribute('style', `position: absolute; left:${x}px; top:${y}px;`);
+    icon.setAttribute('style', `position: absolute; left:${x}%; top:${y}%;`);
 
     mapdiv.appendChild(icon);
 }
