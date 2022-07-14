@@ -1,6 +1,8 @@
 let mapdiv = document.getElementById('mapdiv');
 var cha = document.getElementsByName("cha");
 
+//캐릭터 버튼에 클릭 이벤트 추가
+//switch-case문안에 makeicon을 넣으면 편하게 아이콘 생성
 for (i = 0; i < cha.length; i++) {
     cha[i].addEventListener('click', function () {
 
@@ -164,6 +166,8 @@ for (i = 0; i < cha.length; i++) {
     });
 }
 
+//기존의 생성된 모든 아이콘 태그를 삭제하는 함수
+//mapicon클래스를 지닌 친구들을 모두 삭제한다.
 function initicon() {
     var dellist = document.getElementsByClassName('mapicon');
 
@@ -176,11 +180,14 @@ function initicon() {
 
 }
 
+//맵에 아이콘을 생성하는 함수
+//x,y에 값을 입력하여 아이콘의 위치를 설정할 수 있음
 function makeicon(x, y) {
 
     let icon = document.createElement('img');
 
     icon.setAttribute('src', 'img/split.png');
+    //아이콘 크기는 아래 두줄로 조정
     icon.setAttribute('width', '30px');
     icon.setAttribute('height', '30px');
     icon.setAttribute('class', 'mapicon');
@@ -199,20 +206,27 @@ function makeicon(x, y) {
 const modal = document.getElementById("modal");
 const youtube = document.getElementById("youtube");
 
+//모달창 css속성을 flex로 바꿔서 보여지게 함
 function modalOn() { modal.style.display = "flex"; }
+//모달창 css속성을 none으로 바꿔 숨김
 function modalOff() { modal.style.display = "none"; }
 function isModalOn() { return modal.style.display === "flex"; }
 
 
-//이미지 누르면 모달창 띄움
-//모달창 유튜브 주소만 바꿔서 재사용 할 수 있을듯
-const imgModal = document.getElementById("img-modal");
-imgModal.addEventListener("click", e => {
-    modalOn();
-    youtube.setAttribute("src", "https://www.youtube.com/embed/YwC0m0XaD2E");
-});
+//이미지에 클릭 이벤트 넣음
+//모달창을 띄우고 모달창 영상태그에 img태그에 저장되어있는 title 값을 넣음
+const imgmodal1 = document.getElementsByClassName('img-modal');
+for(x=0; x<imgmodal1.length; x++){
+    imgmodal1[x].addEventListener('click', function () {
+        modalOn();
+        console.log(this);
+        youtube.setAttribute("src", this.getAttribute('title'));
+    });
+}
+
 
 //클로즈 버튼 클릭 시, 모달창 닫음
+//영상은 뒤에서 계속 실행되기 때문에, 영상 태그의 주소를 아예 빼버림
 const closeBtn = modal.querySelector(".close-area")
 closeBtn.addEventListener("click", e => {
     modalOff();

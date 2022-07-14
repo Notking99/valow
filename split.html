@@ -14,12 +14,6 @@
       margin: auto;
     }
 
-    /*중앙 정렬*/
-    .center {
-      display: block;
-      margin: auto;
-    }
-
     /*맵과 캐릭터 버튼이 있는 왼쪽 div*/
     .part1 {
       width: 600px;
@@ -62,6 +56,11 @@
       float: left;
       height: 500px;
       overflow: scroll;
+    }
+
+    .part2 img {
+      display: block;
+      margin: 5px;
     }
 
     /*인라인 형식인 iframe을 block형식(한줄 다 차지)으로 바꿈*/
@@ -126,17 +125,32 @@
       margin: 5px;
     }
 
-    /*담배연기이*/
+    .left_bar {
+      background: blue;
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 50px;
+    }
   </style>
 
 </head>
 
 <body>
+  <!--맵 바꾸는 버튼 모여있는 고정바-->
+  <div class="left_bar">
+    <a href="split.html"><img src="img/split.png" width="30px"></a>
+    <a href="bind.html"><img src="img/bind.png" width="30px"></a>
+    <a href="haven.html"><img src="img/haven.png" width="30px"></a>
+    <a href="ascent.html"><img src="img/ascent.png" width="30px"></a>
+  </div>
+
   <!--맵과 캐릭터 버튼들을 가지고 있는 div-->
-  <div class="center part1" id="part1">
+  <div class="part1" id="part1">
     <div id="mapdiv">
       <img id="mapimg" src="img/split_map.png" width="600px" height="600px">
-      
+
     </div>
     <!--캐릭터 아이콘 및 라디오버튼 1번쨰줄-->
 
@@ -144,21 +158,21 @@
 
       <div class="item">
         <label>
-          <input type="radio" class="center" name="cha" id="astra">
+          <input type="radio" name="cha" id="astra">
           <img src="img/astra.png">
         </label>
       </div>
 
       <div class="item">
         <label>
-          <input type="radio" class="center" name="cha" id="breach">
+          <input type="radio"  name="cha" id="breach">
           <img src="img/breach.png">
         </label>
       </div>
 
       <div class="item">
         <label>
-          <input type="radio" class="center" name="cha" id="brimstone">
+          <input type="radio" name="cha" id="brimstone">
           <img src="img/brimstone.png">
         </label>
       </div>
@@ -166,7 +180,7 @@
       <div class="item">
         <label>
 
-          <input type="radio" class="center" name="cha" id="chamber">
+          <input type="radio" name="cha" id="chamber">
           <img src="img/chamber.png">
         </label>
       </div>
@@ -174,7 +188,7 @@
       <div class="item">
         <label>
 
-          <input type="radio" class="center" name="cha" id="cypher">
+          <input type="radio" class="" name="cha" id="cypher">
           <img src="img/cypher.png">
         </label>
       </div>
@@ -185,7 +199,7 @@
       <div class="item">
         <label>
 
-          <input type="radio" class="center" name="cha" id="fade">
+          <input type="radio" class="" name="cha" id="fade">
           <img src="img/fade.png">
         </label>
       </div>
@@ -193,7 +207,7 @@
       <div class="item">
         <label>
 
-          <input type="radio" class="center" name="cha" id="jett">
+          <input type="radio" class="" name="cha" id="jett">
           <img src="img/jett.png">
         </label>
       </div>
@@ -201,21 +215,21 @@
       <div class="item">
         <label>
 
-          <input type="radio" class="center" name="cha" id="killjoy">
+          <input type="radio" class="" name="cha" id="killjoy">
           <img src="img/killjoy.png">
         </label>
       </div>
 
       <div class="item">
         <label>
-          <input type="radio" class="center" name="cha" id="ko">
+          <input type="radio" class="" name="cha" id="ko">
           <img src="img/ko.png">
         </label>
       </div>
       <div class="item">
         <label>
 
-          <input type="radio" class="center" name="cha" id="neon">
+          <input type="radio" class="" name="cha" id="neon">
           <img src="img/neon.png">
         </label>
       </div>
@@ -226,7 +240,7 @@
       <div class="item">
         <label>
 
-          <input type="radio" class="center" name="cha" id="omen">
+          <input type="radio" class="" name="cha" id="omen">
           <img src="img/omen.png">
         </label>
       </div>
@@ -234,21 +248,21 @@
       <div class="item">
         <label>
 
-          <input type="radio" class="center" name="cha" id="pheonix">
+          <input type="radio" class="" name="cha" id="pheonix">
           <img src="img/pheonix.png">
         </label>
       </div>
 
       <div class="item">
         <label>
-          <input type="radio" class="center" name="cha" id="raze">
+          <input type="radio" class="" name="cha" id="raze">
           <img src="img/raze.png">
         </label>
       </div>
 
       <div class="item">
         <label>
-          <input type="radio" class="center" name="cha" id="reyna">
+          <input type="radio" class="" name="cha" id="reyna">
           <img src="img/reyna.png">
         </label>
       </div>
@@ -256,7 +270,7 @@
       <div class="item">
         <label>
 
-          <input type="radio" class="center" name="cha" id="sage">
+          <input type="radio" class="" name="cha" id="sage">
           <img src="img/sage.png">
         </label>
       </div>
@@ -267,7 +281,7 @@
 
       <div class="item">
         <label>
-          <input type="radio" class="center" name="cha" id="skye">
+          <input type="radio" class="" name="cha" id="skye">
           <img src="img/skye.png">
         </label>
       </div>
@@ -275,21 +289,21 @@
       <div class="item">
         <label>
 
-          <input type="radio" class="center" name="cha" id="sova">
+          <input type="radio" class="" name="cha" id="sova">
           <img src="img/sova.png">
         </label>
       </div>
 
       <div class="item">
         <label>
-          <input type="radio" class="center" name="cha" id="viper">
+          <input type="radio" class="" name="cha" id="viper">
           <img src="img/viper.png">
         </label>
       </div>
 
       <div class="item">
         <label>
-          <input type="radio" class="center" name="cha" id="yoru">
+          <input type="radio" class="" name="cha" id="yoru">
           <img src="img/yoru.png">
         </label>
       </div>
@@ -299,23 +313,10 @@
   <!--유튜브 리스트를 가지고 있는 div
     블로그에 설명 있음 https://blog.naver.com/PostView.naver?blogId=jang0_0yw&logNo=222358947569&parentCategoryNo=&categoryNo=25&viewDate=&isShowPopularPosts=true&from=search-->
   <div class="part2">
-    <img src="https://img.youtube.com/vi/YwC0m0XaD2E/0.jpg" alt="" width="448" id="img-modal">
-
-    <iframe width="448" height="252" src="https://www.youtube.com/embed/lTyMxn45CSM" title="YouTube video player"
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-    <iframe width="448" height="252" src="https://www.youtube.com/embed/lTyMxn45CSM" title="YouTube video player"
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-    <iframe width="448" height="252" src="https://www.youtube.com/embed/lTyMxn45CSM" title="YouTube video player"
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-    <iframe width="448" height="252" src="https://www.youtube.com/embed/lTyMxn45CSM" title="YouTube video player"
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-    <iframe width="448" height="252" src="https://www.youtube.com/embed/lTyMxn45CSM" title="YouTube video player"
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
+    <img src="https://img.youtube.com/vi/YwC0m0XaD2E/0.jpg" title="https://www.youtube.com/embed/YwC0m0XaD2E" width="448" class="img-modal">
+    
+    <img src="https://img.youtube.com/vi/lTyMxn45CSM/0.jpg" title="https://www.youtube.com/embed/lTyMxn45CSM" width="448" class="img-modal">
+    
   </div>
 
   <!--숨겨진 모달창 (영상을 크게 보여줌)-->
